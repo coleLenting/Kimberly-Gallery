@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FavoritesProvider } from "@/contexts/FavoritesContext";
 import { RecentViewsProvider } from "@/contexts/RecentViewsContext";
-import Index from "./pages/Index.tsx";
+import Index from "./pages/index.tsx";
 import CategoryPage from "./pages/CategoryPage.tsx";
 import FavoritesPage from "./pages/FavoritesPage.tsx";
 import RecentViewsPage from "./pages/RecentViewsPage.tsx";
