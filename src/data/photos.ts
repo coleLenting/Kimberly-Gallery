@@ -1,3 +1,4 @@
+
 import { Photo } from '../types/photo';
 
 // Import your local images
@@ -7,6 +8,18 @@ import photo3 from '../assets/images/photo3.jpg';
 import photo4 from '../assets/images/photo4.jpg';
 import photo5 from '../assets/images/photo5.jpg';
 import photo6 from '../assets/images/photo6.jpg';
+import photo7 from '../assets/images/photo7.jpg';
+import photo8 from '../assets/images/photo8.jpg';
+import photo9 from '../assets/images/photo9.jpg';
+import photo10 from '../assets/images/photo10.jpg';
+import photo11 from '../assets/images/photo10.jpg';
+import photo12 from '../assets/images/photo10.jpg';
+import photo13 from '../assets/images/photo10.jpg';
+import photo14 from '../assets/images/photo10.jpg';
+import photo15 from '../assets/images/photo10.jpg';
+import photo16 from '../assets/images/photo10.jpg';
+import photo17 from '../assets/images/photo10.jpg';
+import photo18 from '../assets/images/photo10.jpg';
 
 // Photo templates with local images - add more as you add images to the assets folder
 const photoTemplates = [
@@ -37,6 +50,56 @@ const photoTemplates = [
   },
   {
     url: photo6,
+    title: 'Garden Explorer',
+    description: 'Discovering the wonders of nature in the backyard. Every leaf, every flower is a new world to explore!'
+  },
+  {
+    url: photo7,
+    title: 'Snack Time Fun',
+    description: 'Learning to share is such an important lesson. This sweet moment shows how caring and generous little hearts can be.'
+  },
+  {
+    url: photo8,
+    title: 'Best Friends',
+    description: 'Friendship knows no boundaries. These two were inseparable during our zoo visit - such a magical day!'
+  },
+  {
+    url: photo9,
+    title: 'Morning Sunshine',
+    description: 'Starting the day with such joy and energy. These precious morning moments are treasures that last forever.'
+  },
+  {
+    url: photo10,
+    title: 'Garden Explorer',
+    description: 'Discovering the wonders of nature in the backyard. Every leaf, every flower is a new world to explore!'
+  },
+  {
+    url: photo11,
+    title: 'Morning Sunshine',
+    description: 'Starting the day with such joy and energy. These precious morning moments are treasures that last forever.'
+  },
+  {
+    url: photo12,
+    title: 'Garden Explorer',
+    description: 'Discovering the wonders of nature in the backyard. Every leaf, every flower is a new world to explore!'
+  },
+  {
+    url: photo13,
+    title: 'Snack Time Fun',
+    description: 'Learning to share is such an important lesson. This sweet moment shows how caring and generous little hearts can be.'
+  },
+  {
+    url: photo14,
+    title: 'Best Friends',
+    description: 'Friendship knows no boundaries. These two were inseparable during our zoo visit - such a magical day!'
+  },
+  {
+    url: photo15,
+    title: 'Morning Sunshine',
+    description: 'Starting the day with such joy and energy. These precious morning moments are treasures that last forever.'
+  },
+  {
+    url: photo16,
     title: 'Garden Explorer',
     description: 'Discovering the wonders of nature in the backyard. Every leaf, every flower is a new world to explore!'
   }
