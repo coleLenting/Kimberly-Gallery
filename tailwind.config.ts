@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -53,16 +57,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Custom gallery colors
+				'light-pink': '#FFB6C1',
+				'blush-pink': '#F8BBD9',
+				'dusty-rose': '#D4A5A5',
+				'cream-white': '#FFF8DC',
+				'soft-ivory': '#FFFFF0',
+				'pale-gold': '#F5F5DC',
+				'charcoal-gray': '#36454F',
+				'soft-brown': '#8B7355',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -96,23 +99,21 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
-				'scale-in': {
-					'0%': {
-						transform: 'scale(0.95)',
-						opacity: '0'
-					},
-					'100%': {
-						transform: 'scale(1)',
-						opacity: '1'
-					}
-				}
+				'gentle-bounce': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-2px)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'scale-in': 'scale-in 0.3s ease-out'
-			}
+				'gentle-bounce': 'gentle-bounce 2s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'gradient-pink': 'linear-gradient(135deg, #FFB6C1 0%, #F8BBD9 50%, #FFF8DC 100%)',
+				'gradient-subtle': 'linear-gradient(135deg, #FFFFF0 0%, #FFF8DC 100%)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
