@@ -1,6 +1,6 @@
-
 import { HeroSection } from "@/components/HeroSection";
 import { CategoryGrid } from "@/components/CategoryGrid";
+import { RecentViewsSection } from "@/components/RecentViewsSection";
 import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
@@ -8,6 +8,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-subtle">
       <Navigation />
       <HeroSection />
+      <RecentViewsSection />
       <CategoryGrid />
     </div>
   );

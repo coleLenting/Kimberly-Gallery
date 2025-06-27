@@ -4,6 +4,7 @@ import { useFavorites } from "@/contexts/FavoritesContext";
 import { useShare } from "@/hooks/useShare";
 import { useDownload } from "@/hooks/useDownload";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { useViewTracker } from "@/hooks/useViewTracker";
 
 interface Photo {
   id: number;
@@ -27,10 +28,23 @@ export const PhotoLightbox = ({ photos, currentIndex, onClose, onNavigate, categ
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
   const { sharePhoto, isSharing } = useShare();
   const { downloadPhoto, isDownloading } = useDownload();
+  const { trackPhotoView } = useViewTracker();
 
   const currentPhoto = photos[currentIndex];
   const photoId = `${categoryId}-${currentPhoto.id}`;
   const isCurrentFavorite = isFavorite(photoId);
+
+  // Track photo view when lightbox opens or photo changes
+  useEffect(() => {
+    if (currentPhoto) {
+      trackPhotoView({
+        photoId: photoId,
+        photoUrl: currentPhoto.src,
+        caption: currentPhoto.caption,
+        category: categoryId,
+      });
+    }
+  }, [currentPhoto, photoId, categoryId, trackPhotoView]);
 
   const handlePrevious = () => {
     if (currentIndex > 0) {

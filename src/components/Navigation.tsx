@@ -1,9 +1,11 @@
-import { Camera, Heart } from "lucide-react";
+import { Camera, Heart, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useFavorites } from "@/contexts/FavoritesContext";
+import { useRecentViews } from "@/contexts/RecentViewsContext";
 
 export const Navigation = () => {
   const { favoritesCount } = useFavorites();
+  const { recentViewsCount } = useRecentViews();
 
   return (
     <nav className="bg-white/80 backdrop-blur-md border-b border-light-pink/20 sticky top-0 z-50">
@@ -20,6 +22,20 @@ export const Navigation = () => {
             <a href="#recent" className="text-soft-brown hover:text-blush-pink transition-colors duration-300">
               Recent
             </a>
+            
+            <Link 
+              to="/recent" 
+              className="text-soft-brown hover:text-blush-pink transition-colors duration-300 flex items-center space-x-1 relative"
+            >
+              <Clock className="h-4 w-4" />
+              <span>Recently Viewed</span>
+              {recentViewsCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-blush-pink text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
+                  {recentViewsCount > 99 ? '99+' : recentViewsCount}
+                </span>
+              )}
+            </Link>
+            
             <Link 
               to="/favorites" 
               className="text-soft-brown hover:text-blush-pink transition-colors duration-300 flex items-center space-x-1 relative"
@@ -27,7 +43,7 @@ export const Navigation = () => {
               <Heart className="h-4 w-4" />
               <span>Favorites</span>
               {favoritesCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-blush-pink text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
                   {favoritesCount > 99 ? '99+' : favoritesCount}
                 </span>
               )}
