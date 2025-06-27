@@ -80,7 +80,7 @@ export const CategoryGrid = () => {
             Memory Collection
           </h2>
           <p className="text-lg text-soft-brown max-w-2xl mx-auto">
-            Browse through precious moments organized by the stages of Isabella's beautiful journey
+            Browse through precious moments organized by the stages of Kimberly's beautiful journey
           </p>
         </div>
         

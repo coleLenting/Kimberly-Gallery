@@ -25,7 +25,7 @@ ${data.galleryUrl ? `\nView the full gallery: ${data.galleryUrl}` : ''}`;
       // Check if Web Share API is supported
       if (navigator.share && navigator.canShare) {
         const shareData = {
-          title: 'Beautiful Photo from Isabella\'s Gallery',
+          title: 'Beautiful Photo from Kimberly\'s Gallery',
           text: data.caption,
           url: data.url,
         };
