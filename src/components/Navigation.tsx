@@ -14,14 +14,11 @@ export const Navigation = () => {
           <Link to="/" className="flex items-center space-x-2">
             <Camera className="h-6 w-6 text-blush-pink" />
             <span className="text-xl font-playfair font-semibold text-charcoal-gray">
-              Isabella's Gallery
+              Kimberly's Gallery
             </span>
           </Link>
           
           <div className="flex items-center space-x-6">
-            <a href="#recent" className="text-soft-brown hover:text-blush-pink transition-colors duration-300">
-              Recent
-            </a>
             
             <Link 
               to="/recent" 

@@ -8,7 +8,7 @@ export const HeroSection = () => {
       
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-playfair font-bold text-charcoal-gray mb-6 text-shadow-soft animate-fade-in">
-          Isabella's Gallery
+          Kimberly's Gallery
         </h1>
         <p className="text-xl md:text-2xl text-soft-brown mb-12 font-light animate-fade-in" style={{animationDelay: '0.3s'}}>
           Capturing precious moments and memories
