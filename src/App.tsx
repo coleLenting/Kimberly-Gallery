@@ -5,11 +5,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FavoritesProvider } from "@/contexts/FavoritesContext";
 import { RecentViewsProvider } from "@/contexts/RecentViewsContext";
-import Index from "./pages/Index";
-import CategoryPage from "./pages/CategoryPage";
-import FavoritesPage from "./pages/FavoritesPage";
-import RecentViewsPage from "./pages/RecentViewsPage";
-import NotFound from "./pages/NotFound";
+import Index from "./pages/Index.tsx";
+import CategoryPage from "./pages/CategoryPage.tsx";
+import FavoritesPage from "./pages/FavoritesPage.tsx";
+import RecentViewsPage from "./pages/RecentViewsPage.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 
