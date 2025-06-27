@@ -1,6 +1,8 @@
 
 import { Baby, Book, Backpack, Heart, Camera } from "lucide-react";
 import { CategoryCard } from "./CategoryCard";
+import { getPhotosForCategory } from "@/lib/utils";
+import { get } from "http";
 
 export const CategoryGrid = () => {
   const categories = [
@@ -13,7 +15,7 @@ export const CategoryGrid = () => {
       color: 'bg-light-pink/20',
       iconColor: 'text-light-pink',
       previewImage: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=300&h=300&fit=crop&crop=face',
-      photoCount: 24
+      photoCount: getPhotosForCategory('baby-days').length
     },
     {
       id: 'toddler-adventures',
@@ -24,7 +26,7 @@ export const CategoryGrid = () => {
       color: 'bg-blush-pink/20',
       iconColor: 'text-blush-pink',
       previewImage: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=300&h=300&fit=crop&crop=center',
-      photoCount: 18
+      photoCount: getPhotosForCategory('toddler-adventures').length
     },
     {
       id: 'little-explorer',
@@ -35,7 +37,7 @@ export const CategoryGrid = () => {
       color: 'bg-dusty-rose/20',
       iconColor: 'text-dusty-rose',
       previewImage: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=300&h=300&fit=crop&crop=face',
-      photoCount: 32
+      photoCount: getPhotosForCategory('little-explorer').length
     },
     {
       id: 'school-days',
@@ -46,7 +48,7 @@ export const CategoryGrid = () => {
       color: 'bg-light-pink/20',
       iconColor: 'text-light-pink',
       previewImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop&crop=face',
-      photoCount: 15
+      photoCount: getPhotosForCategory('school-days').length
     },
     {
       id: 'special-occasions',
@@ -57,7 +59,7 @@ export const CategoryGrid = () => {
       color: 'bg-blush-pink/20',
       iconColor: 'text-blush-pink',
       previewImage: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=300&h=300&fit=crop&crop=center',
-      photoCount: 28
+      photoCount: getPhotosForCategory('special-occasions').length
     },
     {
       id: 'everyday-moments',
@@ -68,7 +70,7 @@ export const CategoryGrid = () => {
       color: 'bg-dusty-rose/20',
       iconColor: 'text-dusty-rose',
       previewImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=300&fit=crop&crop=center',
-      photoCount: 41
+      photoCount: getPhotosForCategory('everyday-moments').length
     }
   ];
 

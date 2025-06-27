@@ -4,6 +4,7 @@ import { PhotoGallery } from "@/components/PhotoGallery";
 import { Navigation } from "@/components/Navigation";
 import { useFavorites } from "@/contexts/FavoritesContext";
 import { useState } from "react";
+import { getPhotoCount } from "@/lib/utils";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -25,32 +26,32 @@ const CategoryPage = () => {
   const categoryData = {
     'baby-days': {
       title: 'Baby Days',
-      subtitle: '0-1 year • 24 precious moments',
+      subtitle: `0–1 year • ${getPhotoCount('baby-days')} moments`,
       description: 'Those magical first moments that take your breath away'
     },
     'toddler-adventures': {
       title: 'Toddler Adventures', 
-      subtitle: '1-3 years • 18 adventures',
+      subtitle: `1–3 years • ${getPhotoCount('toddler-adventures')} adventures`,
       description: 'Exploring the world with wonder and curiosity'
     },
     'little-explorer': {
       title: 'Little Explorer',
-      subtitle: '3-5 years • 32 discoveries', 
+      subtitle: `3–5 years • ${getPhotoCount('little-explorer')} discoveries`, 
       description: 'Adventures in discovery and imagination'
     },
     'school-days': {
       title: 'School Days',
-      subtitle: '5+ years • 15 milestones',
+      subtitle: `5+ years • ${getPhotoCount('school-days')} milestones`,
       description: 'Learning, growing, and reaching new heights'
     },
     'special-occasions': {
       title: 'Special Occasions',
-      subtitle: 'Celebrations • 28 memories',
+      subtitle: `Celebrations • ${getPhotoCount('special-occasions')} memories`,
       description: 'Birthdays, holidays, and milestone moments'
     },
     'everyday-moments': {
       title: 'Everyday Moments', 
-      subtitle: 'Daily life • 41 treasures',
+      subtitle: `Daily life • ${getPhotoCount('everyday-moments')} treasures`,
       description: 'The beautiful ordinary that makes life extraordinary'
     }
   };
